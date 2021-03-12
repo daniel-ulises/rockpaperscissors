@@ -143,7 +143,7 @@ body {
 }
 .modal-outer .modal-inner {
   font-size: 1.8rem;
-  padding: 3rem;
+  padding: 2rem;
   width: 50%;
   height: 50%;
   background-color: #353535;
@@ -162,3 +162,16 @@ footer {
   font-size: 1.5rem;
   height: 3rem;
 }
+
+@media only screen and (max-width: 767px) {
+  .modal-outer .modal-inner {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  .player-selection {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
