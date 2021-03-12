@@ -164,7 +164,7 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-  .modal-inner {
+  .modal-outer .modal-inner {
     width: 90%;
     font-size: 1.5rem;
   }
@@ -173,3 +173,5 @@ footer {
     width: 90%;
   }
 }
+
+/*# sourceMappingURL=main.css.map */

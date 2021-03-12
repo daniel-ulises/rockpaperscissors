@@ -99,11 +99,13 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-	.modal-inner {
-		width: 90%;
-		font-size: 1.5rem;
+	.modal-outer {
+		.modal-inner {
+			width: 90%;
+			font-size: 1.5rem;
+		}
 	}
-
+	
 	.player-selection {
 		width: 90%;
 	}
