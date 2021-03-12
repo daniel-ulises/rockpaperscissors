@@ -1,0 +1,20 @@
+@keyframes player-round {
+	45% {
+		transform: translateY(2rem) rotate(90deg);
+		}
+
+	90% {
+		transform: translateY(-2rem) rotate(90deg);
+
+	}
+}
+
+@keyframes computer-round {
+	45% {
+		transform: translateY(2rem) rotate(-90deg) scaleX(-1);
+	}
+
+	90% {
+		transform: translateY(-2rem) rotate(-90deg) scaleX(-1);
+	}
+}

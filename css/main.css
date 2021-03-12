@@ -1,0 +1,117 @@
+.fr, .fr-sa-c, .fr-sb-c {
+  display: flex;
+  flex-direction: row;
+}
+.fr-sb-c {
+  justify-content: space-between;
+  align-items: center;
+}
+.fr-sa-c {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fc, .fc-sa-c, .fc-sb-c {
+  display: flex;
+  flex-direction: column;
+}
+.fc-sb-c {
+  justify-content: space-between;
+  align-items: center;
+}
+.fc-sa-c {
+  justify-content: space-around;
+  align-items: center;
+}
+
+@keyframes player-round {
+  45% {
+    transform: translateY(2rem) rotate(90deg);
+  }
+  90% {
+    transform: translateY(-2rem) rotate(90deg);
+  }
+}
+@keyframes computer-round {
+  45% {
+    transform: translateY(2rem) rotate(-90deg) scaleX(-1);
+  }
+  90% {
+    transform: translateY(-2rem) rotate(-90deg) scaleX(-1);
+  }
+}
+@font-face {
+  font-family: bodyfont;
+  src: url(../../fonts/Montserrat-Regular.otf);
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #353535;
+  color: #d9d9d9;
+  font-family: "bodyfont";
+  height: 100vh;
+  width: 100vw;
+  overflow-x: none;
+}
+
+.score {
+  background-color: #284b63;
+  padding: 2rem;
+}
+.score .player-score, .score .computer-score {
+  height: 5rem;
+}
+.score .p-score, .score .c-score {
+  font-size: 2rem;
+}
+
+.message-outcome {
+  height: 2rem;
+  margin-bottom: 2rem;
+  background-color: #3c5c71;
+}
+
+i {
+  font-size: 4rem;
+}
+i.player {
+  animation: 0.5s ease player-round 3;
+  transform: rotate(90deg);
+}
+i.computer {
+  animation: 0.5s ease computer-round 3;
+  transform: rotate(-90deg) scaleX(-1);
+}
+
+.round-outcome {
+  width: 60%;
+  height: 10rem;
+  margin: 5rem auto;
+}
+
+.player-selection {
+  width: 40%;
+  margin: 5rem auto;
+}
+.player-selection button {
+  padding: 1rem;
+  width: 7rem;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #284b63;
+  border-radius: 5px;
+  color: #d9d9d9;
+  cursor: pointer;
+}
+.player-selection button:hover {
+  background-color: #284b63;
+  border-color: #3c5c71;
+}
+.player-selection button:focus, .player-selection button:active {
+  border-color: #3c5c71;
+}

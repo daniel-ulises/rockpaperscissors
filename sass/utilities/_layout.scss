@@ -1,0 +1,33 @@
+.fr {
+	display: flex;
+	flex-direction: row;
+
+	&-sb-c {
+		@extend .fr;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-sa-c {
+		@extend .fr;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+
+.fc {
+	display: flex;
+	flex-direction: column;
+
+	&-sb-c {
+		@extend .fc;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-sa-c {
+		@extend .fc;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
