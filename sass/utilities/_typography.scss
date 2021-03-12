@@ -1,0 +1,10 @@
+@mixin fontface {
+	@font-face {
+		font-family: bodyfont;
+		src: url(../../fonts/Montserrat-Regular.otf);
+	}		
+}
+
+// Font defaults
+$font-size: 1rem;
+
