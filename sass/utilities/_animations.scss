@@ -18,3 +18,11 @@
 		transform: translateY(-2rem) rotate(-90deg) scaleX(-1);
 	}
 }
+
+.player-animation {
+	animation: .5s ease 3 player-round;
+}
+
+.computer-animation {
+	animation: .5s ease 3 computer-round;
+}

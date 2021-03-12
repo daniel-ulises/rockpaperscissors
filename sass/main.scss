@@ -42,12 +42,10 @@ body {
 	i {
 		font-size: 4rem;
 		&.player {
-			animation: .5s ease player-round 3;
 			transform: rotate(90deg);
 		}
 	
 		&.computer {
-			animation: .5s ease computer-round 3;
 			transform: rotate(-90deg) scaleX(-1);
 	
 		}
@@ -78,10 +76,13 @@ body {
 	
 
 	.modal-inner {
+		font-size: 1.8rem;
+		padding: 3rem;
 		width: 50%;
-		height: 60%;
+		height: 50%;
 		background-color: c.$bg-color;
 		border-radius: 10px;
+		text-align: center;
 	}
 }
 

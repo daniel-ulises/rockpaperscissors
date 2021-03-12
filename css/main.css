@@ -66,6 +66,14 @@ button:focus, button:active {
     transform: translateY(-2rem) rotate(-90deg) scaleX(-1);
   }
 }
+.player-animation {
+  animation: 0.5s ease 3 player-round;
+}
+
+.computer-animation {
+  animation: 0.5s ease 3 computer-round;
+}
+
 @font-face {
   font-family: bodyfont;
   src: url(../fonts/Montserrat-Regular.otf);
@@ -110,11 +118,9 @@ body {
   font-size: 4rem;
 }
 .round-outcome i.player {
-  animation: 0.5s ease player-round 3;
   transform: rotate(90deg);
 }
 .round-outcome i.computer {
-  animation: 0.5s ease computer-round 3;
   transform: rotate(-90deg) scaleX(-1);
 }
 
@@ -136,10 +142,13 @@ body {
   transition: 0.5s ease;
 }
 .modal-outer .modal-inner {
+  font-size: 1.8rem;
+  padding: 3rem;
   width: 50%;
-  height: 60%;
+  height: 50%;
   background-color: #353535;
   border-radius: 10px;
+  text-align: center;
 }
 
 .fade-in {
