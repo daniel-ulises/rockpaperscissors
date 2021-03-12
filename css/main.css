@@ -1,3 +1,11 @@
+a {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+a:hover, a:active {
+  color: #3c5c71;
+}
+
 .fr, .fr-sa-c, .fr-sb-c {
   display: flex;
   flex-direction: row;
@@ -24,6 +32,24 @@
   align-items: center;
 }
 
+button {
+  padding: 1rem;
+  width: 7rem;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #284b63;
+  border-radius: 5px;
+  color: #d9d9d9;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #284b63;
+  border-color: #3c5c71;
+}
+button:focus, button:active {
+  border-color: #3c5c71;
+}
+
 @keyframes player-round {
   45% {
     transform: translateY(2rem) rotate(90deg);
@@ -40,9 +66,17 @@
     transform: translateY(-2rem) rotate(-90deg) scaleX(-1);
   }
 }
+.player-animation {
+  animation: 0.5s ease 3 player-round;
+}
+
+.computer-animation {
+  animation: 0.5s ease 3 computer-round;
+}
+
 @font-face {
   font-family: bodyfont;
-  src: url(../../fonts/Montserrat-Regular.otf);
+  src: url(../fonts/Montserrat-Regular.otf);
 }
 *, *::before, *::after {
   margin: 0;
@@ -55,8 +89,7 @@ body {
   color: #d9d9d9;
   font-family: "bodyfont";
   height: 100vh;
-  width: 100vw;
-  overflow-x: none;
+  overflow-x: hidden;
 }
 
 .score {
@@ -72,46 +105,60 @@ body {
 
 .message-outcome {
   height: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   background-color: #3c5c71;
-}
-
-i {
-  font-size: 4rem;
-}
-i.player {
-  animation: 0.5s ease player-round 3;
-  transform: rotate(90deg);
-}
-i.computer {
-  animation: 0.5s ease computer-round 3;
-  transform: rotate(-90deg) scaleX(-1);
 }
 
 .round-outcome {
   width: 60%;
-  height: 10rem;
+  height: 6rem;
   margin: 5rem auto;
+}
+.round-outcome i {
+  font-size: 4rem;
+}
+.round-outcome i.player {
+  transform: rotate(90deg);
+}
+.round-outcome i.computer {
+  transform: rotate(-90deg) scaleX(-1);
 }
 
 .player-selection {
-  width: 40%;
+  width: 60%;
   margin: 5rem auto;
 }
-.player-selection button {
-  padding: 1rem;
-  width: 7rem;
+
+.modal-outer {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.modal-outer .modal-inner {
+  font-size: 1.8rem;
+  padding: 3rem;
+  width: 50%;
+  height: 50%;
+  background-color: #353535;
+  border-radius: 10px;
   text-align: center;
-  background-color: transparent;
-  border: 2px solid #284b63;
-  border-radius: 5px;
-  color: #d9d9d9;
-  cursor: pointer;
 }
-.player-selection button:hover {
-  background-color: #284b63;
-  border-color: #3c5c71;
+
+.fade-in {
+  opacity: 1;
+  transition: 0.5s ease;
+  pointer-events: all;
 }
-.player-selection button:focus, .player-selection button:active {
-  border-color: #3c5c71;
+
+footer {
+  text-align: center;
+  font-size: 1.5rem;
+  height: 3rem;
 }

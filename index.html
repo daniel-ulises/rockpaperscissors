@@ -9,6 +9,12 @@
 	<title>Rock Paper Scissors</title>
 </head>
 <body>
+	<div class="modal-outer fr-sa-c">
+		<div class="modal-inner fc-sa-c">
+			<p class="modal-message"></p>
+			<button class="play-again">Play again!</button>
+		</div>
+	</div>
 	<div class="score fr-sa-c">
 		<div class="player-score fc-sb-c">
 			<p>Player Score</p>
@@ -20,20 +26,24 @@
 		</div>
 	</div>
 	<div class="message-outcome fr-sa-c">
-		<span>test</span>
+		<span class="message-content"></span>
 	</div>
 	<div class="round-outcome fr-sa-c">
 		<div class="player-choice">
 			<i class="fas fa-hand-rock player"></i>
 		</div>
-		<div class="computer choice">
+		<div class="computer-choice">
 			<i class="fas fa-hand-rock computer"></i>
 		</div>
 	</div>
 	<div class="player-selection fr-sa-c">
-		<button>Rock</button>
-		<button>Paper</button>
-		<button>Scissors</button>
+		<button class="btn-choice">Rock</button>
+		<button class="btn-choice">Paper</button>
+		<button class="btn-choice">Scissors</button>
 	</div>
+	<footer>
+		<a href="https://github.com/daniel-ulises/rockpaperscissors" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+	</footer>
+	<script src="./js/main.js"></script>
 </body>
 </html>
