@@ -32,6 +32,24 @@ a:hover, a:active {
   align-items: center;
 }
 
+button {
+  padding: 1rem;
+  width: 7rem;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #284b63;
+  border-radius: 5px;
+  color: #d9d9d9;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #284b63;
+  border-color: #3c5c71;
+}
+button:focus, button:active {
+  border-color: #3c5c71;
+}
+
 @keyframes player-round {
   45% {
     transform: translateY(2rem) rotate(90deg);
@@ -104,23 +122,6 @@ body {
   width: 60%;
   margin: 5rem auto;
 }
-.player-selection button {
-  padding: 1rem;
-  width: 7rem;
-  text-align: center;
-  background-color: transparent;
-  border: 2px solid #284b63;
-  border-radius: 5px;
-  color: #d9d9d9;
-  cursor: pointer;
-}
-.player-selection button:hover {
-  background-color: #284b63;
-  border-color: #3c5c71;
-}
-.player-selection button:focus, .player-selection button:active {
-  border-color: #3c5c71;
-}
 
 .modal-outer {
   height: 100vh;
@@ -132,16 +133,19 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   pointer-events: none;
   opacity: 0;
+  transition: 0.5s ease;
 }
 .modal-outer .modal-inner {
   width: 50%;
   height: 60%;
-  background-color: black;
+  background-color: #353535;
+  border-radius: 10px;
 }
 
 .fade-in {
   opacity: 1;
   transition: 0.5s ease;
+  pointer-events: all;
 }
 
 footer {

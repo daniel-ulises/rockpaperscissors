@@ -61,25 +61,7 @@ body {
 	width: 60%;
 	margin: 5rem auto;
 
-	button {
-		padding: 1rem;
-		width: 7rem;
-		text-align: center;
-		background-color: transparent;
-		border: 2px solid c.$primary;
-		border-radius: 5px;
-		color: c.$text-color;
-		cursor: pointer ;
-
-		&:hover {
-			background-color: c.$primary;
-			border-color: c.$secondary;
-		}
-
-		&:focus, &:active {
-			border-color: c.$secondary;
-		}
-	}
+	
 }
 
 .modal-outer {
@@ -92,18 +74,21 @@ body {
 	background-color: rgba(0, 0, 0, 0.7);
 	pointer-events: none;
 	opacity: 0;
+	transition: .5s ease;
 	
 
 	.modal-inner {
 		width: 50%;
 		height: 60%;
-		background-color: black;
+		background-color: c.$bg-color;
+		border-radius: 10px;
 	}
 }
 
 .fade-in {
 	opacity: 1;
 	transition: .5s ease;
+	pointer-events: all;
 }
 
 footer {

@@ -1,3 +1,5 @@
+@use "colors" as c;
+
 .fr {
 	display: flex;
 	flex-direction: row;
@@ -31,3 +33,23 @@
 		align-items: center;
 	}
 }
+
+button {
+		padding: 1rem;
+		width: 7rem;
+		text-align: center;
+		background-color: transparent;
+		border: 2px solid c.$primary;
+		border-radius: 5px;
+		color: c.$text-color;
+		cursor: pointer ;
+
+		&:hover {
+			background-color: c.$primary;
+			border-color: c.$secondary;
+		}
+
+		&:focus, &:active {
+			border-color: c.$secondary;
+		}
+	}
