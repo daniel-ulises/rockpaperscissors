@@ -1,8 +1,19 @@
+@use "colors" as *;
+
 @mixin fontface {
 	@font-face {
 		font-family: bodyfont;
-		src: url(../../fonts/Montserrat-Regular.otf);
+		src: url(../fonts/Montserrat-Regular.otf);
 	}		
+}
+
+a {
+	text-decoration: none;
+	color: $text-color;
+
+	&:hover, &:active {
+		color: $secondary;
+	}
 }
 
 // Font defaults
