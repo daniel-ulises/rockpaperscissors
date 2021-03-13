@@ -14,7 +14,6 @@ let pScore = 0,
 
 playerChoice.forEach(button => {
 	button.addEventListener("click", () => {
-		console.log(pScore, cScore)
 		playRound(button.textContent.toLowerCase());
 		playerHand.className = "fas fa-hand-rock player player-animation";
 		computerHand.className = "fas fa-hand-rock computer computer-animation";
@@ -52,7 +51,7 @@ function playRound(choice) {
 		
 		switch(computerChoice()) {		
 			case "rock": 
-				computerHand.className = `fas fa-hand-rock computer`;
+				computerHand.className = "fas fa-hand-rock computer";
 				switch(choice) {
 					case "rock":
 						message.textContent = "It's a tie!";
@@ -73,7 +72,7 @@ function playRound(choice) {
 				break;
 			
 			case "paper":
-				computerHand.className = `fas fa-hand-paper computer`;
+				computerHand.className = "fas fa-hand-paper computer";
 				switch(choice) {
 					case "rock":
 						message.textContent = "You lose this round, keep going!";
@@ -94,7 +93,7 @@ function playRound(choice) {
 				break;
 			
 			case "scissors":
-				computerHand.className = `fas fa-hand-scissors computer`;
+				computerHand.className = "fas fa-hand-scissors computer";
 				switch(choice) {
 					case "rock":
 						message.textContent = "You win this round, keep going!";

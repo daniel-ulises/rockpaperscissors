@@ -67,11 +67,11 @@ button:focus, button:active {
   }
 }
 .player-animation {
-  animation: 0.5s ease 3 player-round;
+  animation: 0.5s ease 2 player-round;
 }
 
 .computer-animation {
-  animation: 0.5s ease 3 computer-round;
+  animation: 0.5s ease 2 computer-round;
 }
 
 @font-face {
