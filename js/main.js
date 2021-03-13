@@ -44,13 +44,6 @@ function gameOver() {
 		computerHand.className = "fas fa-hand-rock computer";
 	})
 	
-	// if(pScore == 5) {
-	// 	modalMessage.textContent = "You won, congratulations! Press the button to play again!"
-	// }
-
-	// if(cScore == 5) {
-	// 	modalMessage.textContent = "You lost, better luck next time! Press the button to play again!"
-	// }
 }
 
 function playRound(choice) {
@@ -121,6 +114,7 @@ function playRound(choice) {
 				}
 				break;
 		}
+
 		gameOver();
 	}, {once : true})
 }
